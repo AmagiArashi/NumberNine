@@ -1,0 +1,9 @@
+C:\Users\abbytsai\Desktop\gitNumberNine\BudgetQuery\bin\Debug\BudgetQuery.dll
+C:\Users\abbytsai\Desktop\gitNumberNine\BudgetQuery\bin\Debug\BudgetQuery.pdb
+C:\Users\abbytsai\Desktop\gitNumberNine\BudgetQuery\bin\Debug\nunit.framework.dll
+C:\Users\abbytsai\Desktop\gitNumberNine\BudgetQuery\bin\Debug\nunit.framework.xml
+C:\Users\abbytsai\Desktop\gitNumberNine\BudgetQuery\obj\Debug\BudgetQuery.csproj.AssemblyReference.cache
+C:\Users\abbytsai\Desktop\gitNumberNine\BudgetQuery\obj\Debug\BudgetQuery.csproj.CoreCompileInputs.cache
+C:\Users\abbytsai\Desktop\gitNumberNine\BudgetQuery\obj\Debug\BudgetQuery.csproj.CopyComplete
+C:\Users\abbytsai\Desktop\gitNumberNine\BudgetQuery\obj\Debug\BudgetQuery.dll
+C:\Users\abbytsai\Desktop\gitNumberNine\BudgetQuery\obj\Debug\BudgetQuery.pdb
