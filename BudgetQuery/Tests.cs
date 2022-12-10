@@ -84,6 +84,24 @@ namespace BudgetQuery
         }
         
         [Test]
+        public void month_budget_data_amount_zero()
+        {
+            Budget b = new Budget
+            {
+                YearMonth = "202205",
+                Amount = 0
+            };
+            
+            _dummy = new DummyBudget(new List<Budget>(){b});
+            _budgetService = new BudgetService(_dummy);
+            
+            DateTime start =  new DateTime(2022,5,1);
+            DateTime end = new DateTime(2022,5,31);
+            
+            Assert.AreEqual(0, _budgetService.Query(start, end));
+        }
+        
+        [Test]
         public void cross_two_months()
         {
             Budget b1 = new Budget
