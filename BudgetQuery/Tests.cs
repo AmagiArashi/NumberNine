@@ -100,6 +100,28 @@ namespace BudgetQuery
             
             Assert.AreEqual(0, _budgetService.Query(start, end));
         }
+        [Test]
+        public void two_month_with_one_budget_data_amount_zero()
+        {
+            Budget b1 = new Budget
+            {
+                YearMonth = "202208",
+                Amount = 0
+            };
+            Budget b2 = new Budget
+            {
+                YearMonth = "202209",
+                Amount = 300
+            };
+            
+            _dummy = new DummyBudget(new List<Budget>(){b1, b2});
+            _budgetService = new BudgetService(_dummy);
+            
+            DateTime start =  new DateTime(2022,8,31);
+            DateTime end = new DateTime(2022,9,1);
+            
+            Assert.AreEqual(10, _budgetService.Query(start, end));
+        }
         
         [Test]
         public void cross_two_months()
