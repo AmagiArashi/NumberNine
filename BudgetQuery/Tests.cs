@@ -10,13 +10,6 @@ namespace BudgetQuery
         private DummyBudget _dummy;
         private BudgetService _budgetService;
 
-        [SetUp]
-        public void SetUp()
-        {
-            
-
-        }
-        
         [Test]
         public void same_month_same_day()
         {
@@ -151,6 +144,29 @@ namespace BudgetQuery
             DateTime end = new DateTime(2022,3,2);
             
             Assert.AreEqual(1+560+20, _budgetService.Query(start, end));
+        }
+        
+        [Test]
+        public void cross_month_and_cross_year()
+        {
+            Budget b1 = new Budget
+            {
+                YearMonth = "202212",
+                Amount = 310
+            };
+            Budget b2 = new Budget
+            {
+                YearMonth = "202301",
+                Amount = 620
+            };
+            
+            _dummy = new DummyBudget(new List<Budget>(){b1, b2});
+            _budgetService = new BudgetService(_dummy);
+            
+            DateTime start =  new DateTime(2022,12,31);
+            DateTime end = new DateTime(2023,1,2);
+            
+            Assert.AreEqual(10+40, _budgetService.Query(start, end));
         }
     }
 
